@@ -12,3 +12,4 @@ A site that will provide an opportunity to find out the speed of text input usin
 - Carry out testing
   - Postman collection for testing five scenarios
   - Unit tests of the data processing algorithm
+- Add Swagger UI
