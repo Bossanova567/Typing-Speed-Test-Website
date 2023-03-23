@@ -1,4 +1,6 @@
 # Typing-Speed-Test-Website
+ Deployed on [Azure Web Apps](https://typingspeedtestwebsite.azurewebsites.net)
+
 A site that will provide an opportunity to find out the speed of text input using tests of different durations. The results of the authorized user will be saved, so you can follow your own progress.
 
 ## Decomposition of tasks
