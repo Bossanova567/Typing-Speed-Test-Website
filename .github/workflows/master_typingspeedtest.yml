@@ -44,7 +44,7 @@ jobs:
           name: java-app
 
       - name: Rename war to ROOT
-        run: mv azure-0.0.1-SNAPSHOT.war ROOT.war
+        run: mv TypingSpeedTestWebsite-0.0.1-SNAPSHOT.war ROOT.war
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
