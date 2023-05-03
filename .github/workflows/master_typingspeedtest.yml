@@ -43,6 +43,9 @@ jobs:
         with:
           name: java-app
 
+      - name: Rename war to ROOT
+        run: mv azure-0.0.1-SNAPSHOT.war ROOT.war
+
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
@@ -50,4 +53,4 @@ jobs:
           app-name: 'typingspeedtest'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1669D57922CE4C99A0D9FCA01C4D79EA }}
-          package: '*.war'
+          package: 'ROOT.war'
