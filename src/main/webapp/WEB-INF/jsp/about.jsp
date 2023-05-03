@@ -46,11 +46,12 @@
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
     <h1 class="w3-margin w3-jumbo">About the Typing Speed Test Website</h1>
     <p class="w3-xlarge">A site that will provide an opportunity to find out the speed of text input using tests of different durations. The results of the authorized user will be saved, so you can follow your own progress.</p>
-    <p class="w3-xlarge">My unique algorith is calculation of input speed (words per minute) corrected for correctness and its comparison with average user results.</p>
+    <p class="w3-xlarge">My unique algorithm is calculation of input speed (words per minute) corrected for correctness and its comparison with average user results.</p>
     <p class="w3-xlarge">Student name: Yaroslav Tsvyk</p>
     <p class="w3-xlarge">Email: mygoodcovers@gmail.com</p>
     <p class="w3-xlarge">Telegram link: <a href="http://t.me/EdenMonde">here</a></p>
     <p class="w3-xlarge">GitHub link: <a href="https://github.com/Bossanova567/Typing-Speed-Test-Website">here</a></p>
+    <p class="w3-xlarge">Now with configured CI/CD.</p>
 </header>
 
 
