@@ -1,7 +1,25 @@
 # Typing-Speed-Test-Website
- Deployed on [Azure Web Apps](https://typingspeedtestwebsite.azurewebsites.net)
+Deployed on [Azure Web Apps](https://typingspeedtestwebsite.azurewebsites.net).
+
+Being developed by Yaroslav Tsvyk. ([Telegram](https://t.me/EdenMonde))
+
+Email: mygoodcovers@gmail.com.
+
+### Description:
 
 A site that will provide an opportunity to find out the speed of text input using tests of different durations. The results of the authorized user will be saved, so you can follow your own progress.
+
+### Used technologies/packages: 
+- Spring Boot
+- Maven
+- Tomcat
+- JSTL
+- MySQL
+- Hibernate
+
+### Used resources: 
+- Azure App Service
+- Azure Database for MySQL flexible server
 
 ## Decomposition of tasks
 - Implement user login
@@ -14,4 +32,3 @@ A site that will provide an opportunity to find out the speed of text input usin
 - Carry out testing
   - Postman collection for testing five scenarios
   - Unit tests of the data processing algorithm
-- Add Swagger UI
