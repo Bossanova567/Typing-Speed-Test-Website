@@ -51,7 +51,7 @@
     <p class="w3-xlarge">Email: mygoodcovers@gmail.com</p>
     <p class="w3-xlarge">Telegram link: <a href="http://t.me/EdenMonde">here</a></p>
     <p class="w3-xlarge">GitHub link: <a href="https://github.com/Bossanova567/Typing-Speed-Test-Website">here</a></p>
-    <p class="w3-xlarge">Now with configured CI/CD.</p>
+    <p class="w3-xlarge">Now with configured CI/CD!</p>
 </header>
 
 
