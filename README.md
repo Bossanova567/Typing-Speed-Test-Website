@@ -32,3 +32,13 @@ A site that will provide an opportunity to find out the speed of text input usin
 - Carry out testing
   - Postman collection for testing five scenarios
   - Unit tests of the data processing algorithm
+
+## Lab 3
+
+### Description:
+
+I implemented a feature into Yaroslav's project. I added Favorite Quotes API to show random quote on his home page. As some wise man said, good quote can change your life.
+
+### My name: Yurii Robak
+
+### My project: [here](https://github.com/yabluko/Robak.LNU.Job-Portal).
