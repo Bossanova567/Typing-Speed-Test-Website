@@ -39,6 +39,8 @@ A site that will provide an opportunity to find out the speed of text input usin
 
 I implemented a feature into Yaroslav's project. I added Favorite Quotes API to show random quote on his home page. As some wise man said, good quote can change your life.
 
-### My name: Yurii Robak
+My name: Yurii Robak
 
-### My project: [here](https://github.com/yabluko/Robak.LNU.Job-Portal).
+My project: [here](https://github.com/yabluko/Robak.LNU.Job-Portal).
+
+My pull request: [here](https://github.com/Bossanova567/Typing-Speed-Test-Website/pull/1)
