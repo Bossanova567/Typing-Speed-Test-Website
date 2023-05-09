@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 
     @RequestMapping(method = RequestMethod.GET)
-    public String index(){
+    public String index(ModelMap modelMap){
+        Quote quote = new Quote();
+        modelMap.put("quote", quote.generateQuote());
         return "home";
     }
 
