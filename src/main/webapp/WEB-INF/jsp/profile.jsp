@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,33 +25,45 @@
     <div class="w3-bar w3-red w3-card w3-left-align w3-large">
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
         <a class="w3-bar-item w3-button w3-hide-small w3-padding-large">Yaroslav Tsvyk</a>
-        <a href="${pageContext.request.contextPath}/home" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Swagger UI</a>
+        <a href="${pageContext.request.contextPath}/home" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+        <a href="${pageContext.request.contextPath}/swagger-ui.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Swagger UI</a>
         <a href="${pageContext.request.contextPath}/paragraph" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Paragraphs</a>
         <a href="${pageContext.request.contextPath}/paragraph/add" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Add a paragraph</a>
         <a href="${pageContext.request.contextPath}/about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
-        <a href="#" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+        <c:if test="${pageContext.request.userPrincipal.name != null }">
+            <a href="${pageContext.request.contextPath }/user/dashboard" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">${pageContext.request.userPrincipal.name }</a>
+            <a href="${pageContext.request.contextPath }/user/process-logout" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Logout</a>
+        </c:if>
+        <c:if test="${pageContext.request.userPrincipal.name == null }">
+            <a href="${pageContext.request.contextPath}/user-panel/login" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+        </c:if>
     </div>
 
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Swagger UI</a>
-        <a href="${pageContext.request.contextPath}/paragraph" class="w3-bar-item w3-button w3-padding-large">Paragraphs</a>
-        <a href="${pageContext.request.contextPath}/paragraph/add" class="w3-bar-item w3-button w3-padding-large">Add a paragraph</a>
-        <a href="${pageContext.request.contextPath}/about" class="w3-bar-item w3-button w3-padding-large">About</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Login</a>
-    </div>
 </div>
 
 <!-- Header -->
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
-    <h1 class="w3-margin w3-jumbo">Typing Speed Test Website</h1>
-    <p class="w3-xlarge">A website, with which you can test your text input speed, follow your own successes and get better at typing!</p>
-</header>
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    ${err }
+                    <s:form id="RegForm" method="post" modelAttribute="user" action="${pageContext.request.contextPath }/user/profile">
+                        <p>Username</p>
+                        <s:input path="username" required="required" readonly="true"/>
+                        <p>Password</p>
+                        <s:input path="password" required="required" onfocus="this.value=''" autocomplete="false"/>
+                        <p>Email</p>
+                        <s:input type="email" path="email" required="required"/>
+                        <button type="submit" class="btn">Save</button>
+                        <s:hidden path="id" />
+                    </s:form>
 
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Random Quote: ${quote}</h1>
-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">

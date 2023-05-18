@@ -6,7 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan({"com.example.TypingSpeedTestWebsite.controllers", "com.example.TypingSpeedTestWebsite.services"})
+@ComponentScan( {"com.example.TypingSpeedTestWebsite.controllers", "com.example.TypingSpeedTestWebsite.services", "com.example.TypingSpeedTestWebsite.configurations"})
 @SpringBootApplication
 public class TypingSpeedTestWebsiteApplication extends SpringBootServletInitializer {
 	@Override

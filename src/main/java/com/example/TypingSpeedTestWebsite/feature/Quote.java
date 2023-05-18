@@ -1,6 +1,7 @@
 package com.example.TypingSpeedTestWebsite.feature;
 
 
+import io.swagger.v3.oas.annotations.Operation;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -9,6 +10,7 @@ import java.net.URL;
 
 public class Quote {
 
+    @Operation(summary = "Generate a quote", description = "Parses and returns a quote from Favorite Quotes API.")
     public String generateQuote()  {
         String quote = "";
         try {

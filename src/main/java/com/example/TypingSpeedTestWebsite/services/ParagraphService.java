@@ -13,6 +13,6 @@ public interface ParagraphService {
 
     public Paragraph save(Paragraph paragraph);
 
-    public List<Paragraph> findParagraphsWithDifficulty(@Param("difficulty") int difficulty);
+    public List<Paragraph> findParagraphsByDifficulty(@Param("difficulty") int difficulty);
 
 }

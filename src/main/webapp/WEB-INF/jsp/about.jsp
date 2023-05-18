@@ -25,21 +25,20 @@
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
         <a class="w3-bar-item w3-button w3-hide-small w3-padding-large">Yaroslav Tsvyk</a>
         <a href="${pageContext.request.contextPath}/home" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Swagger UI</a>
+        <a href="${pageContext.request.contextPath}/swagger-ui.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Swagger UI</a>
         <a href="${pageContext.request.contextPath}/paragraph" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Paragraphs</a>
         <a href="${pageContext.request.contextPath}/paragraph/add" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Add a paragraph</a>
-        <a href="${pageContext.request.contextPath}/about" class="w3-bar-item w3-button w3-padding-large w3-white">About</a>
-        <a href="#" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+        <a href="${pageContext.request.contextPath}/about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
+        <c:if test="${pageContext.request.userPrincipal.name != null }">
+            <a href="${pageContext.request.contextPath }/user/dashboard" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">${pageContext.request.userPrincipal.name }</a>
+            <a href="${pageContext.request.contextPath }/user/process-logout" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Logout</a>
+        </c:if>
+        <c:if test="${pageContext.request.userPrincipal.name == null }">
+            <a href="${pageContext.request.contextPath}/user-panel/login" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+        </c:if>
     </div>
 
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Swagger UI</a>
-        <a href="${pageContext.request.contextPath}/paragraph" class="w3-bar-item w3-button w3-padding-large">Paragraphs</a>
-        <a href="${pageContext.request.contextPath}/paragraph/add" class="w3-bar-item w3-button w3-padding-large">Add a paragraph</a>
-        <a href="${pageContext.request.contextPath}/about" class="w3-bar-item w3-button w3-padding-large">About</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Login</a>
-    </div>
+
 </div>
 
 <!-- Header -->
