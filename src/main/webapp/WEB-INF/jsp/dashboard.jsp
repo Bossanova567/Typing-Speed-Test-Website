@@ -28,6 +28,7 @@
         <a href="${pageContext.request.contextPath}/swagger-ui.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Swagger UI</a>
         <a href="${pageContext.request.contextPath}/paragraph" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Paragraphs</a>
         <a href="${pageContext.request.contextPath}/paragraph/add" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Add a paragraph</a>
+        <a href="${pageContext.request.contextPath}/test" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Typing Speed Test</a>
         <a href="${pageContext.request.contextPath}/about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
         <c:if test="${pageContext.request.userPrincipal.name != null }">
             <a href="${pageContext.request.contextPath }/user/dashboard" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">${pageContext.request.userPrincipal.name }</a>
@@ -42,8 +43,59 @@
 
 <!-- Header -->
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
-    <h1>there will be users dashboard with statistics :3</h1>
-    <a href="${pageContext.request.contextPath }/user/profile">Edit profile</a>
+
+    <div>
+        <div class="col-xs-12">
+
+            <c:if test="${error != null }">
+                <div class="alert alert-danger alert-dismissible">
+                        ${error }
+                </div>
+            </c:if>
+
+            <a href="${pageContext.request.contextPath }/user/profile">Edit profile</a>
+
+            <c:if test="${history.size() == 0}">
+                <h1>There will be users dashboard with your statistics :3</h1>
+            </c:if>
+
+            <c:if test="${history.size() != 0}">
+            <div>
+                <div>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>WPM</th>
+                            <th>CPM</th>
+                            <th>Mistakes</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <c:forEach var="h" items="${history }">
+                            <tr>
+                                <td>${h.id }</td>
+                                <td>${h.wpm }</td>
+                                <td>${h.cpm }</td>
+                                <td>${h.mistakes }</td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Id</th>
+                            <th>WPM</th>
+                            <th>CPM</th>
+                            <th>Mistakes</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            </c:if>
+
+        </div>
+    </div>
 </header>
 
 

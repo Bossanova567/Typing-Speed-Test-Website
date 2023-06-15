@@ -1,16 +1,14 @@
 package com.example.TypingSpeedTestWebsite.services;
 
-import org.springframework.security.core.userdetails.UserDetailsService;
 import com.example.TypingSpeedTestWebsite.models.Account;
-
-import java.util.List;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface AccountService extends UserDetailsService{
 	
-	public Account findByUsername(String username);
+	Account findByUsername(String username);
 	
-	public Account findById(int id);
+	Account findById(int id);
 	
-	public Account save(Account account);
+	Account save(Account account);
 	
 }

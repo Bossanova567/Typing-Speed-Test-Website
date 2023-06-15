@@ -28,6 +28,7 @@
         <a href="${pageContext.request.contextPath}/swagger-ui.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Swagger UI</a>
         <a href="${pageContext.request.contextPath}/paragraph" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Paragraphs</a>
         <a href="${pageContext.request.contextPath}/paragraph/add" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Add a paragraph</a>
+        <a href="${pageContext.request.contextPath}/test" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Typing Speed Test</a>
         <a href="${pageContext.request.contextPath}/about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
         <c:if test="${pageContext.request.userPrincipal.name != null }">
             <a href="${pageContext.request.contextPath }/user/dashboard" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">${pageContext.request.userPrincipal.name }</a>

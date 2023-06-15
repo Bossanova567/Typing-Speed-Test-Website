@@ -28,6 +28,7 @@
         <a href="${pageContext.request.contextPath}/swagger-ui.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Swagger UI</a>
         <a href="${pageContext.request.contextPath}/paragraph" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Paragraphs</a>
         <a href="${pageContext.request.contextPath}/paragraph/add" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Add a paragraph</a>
+        <a href="${pageContext.request.contextPath}/test" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Typing Speed Test</a>
         <a href="${pageContext.request.contextPath}/about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
         <c:if test="${pageContext.request.userPrincipal.name != null }">
             <a href="${pageContext.request.contextPath }/user/dashboard" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">${pageContext.request.userPrincipal.name }</a>
@@ -48,9 +49,8 @@
     <p class="w3-xlarge">My unique algorithm is calculation of input speed (words per minute) corrected for correctness and its comparison with average user results.</p>
     <p class="w3-xlarge">Student name: Yaroslav Tsvyk</p>
     <p class="w3-xlarge">Email: mygoodcovers@gmail.com</p>
-    <p class="w3-xlarge">Telegram link: <a href="http://t.me/EdenMonde">here</a></p>
+    <p class="w3-xlarge">Telegram link: <a href="http://t.me/deathtoheaven">here</a></p>
     <p class="w3-xlarge">GitHub link: <a href="https://github.com/Bossanova567/Typing-Speed-Test-Website">here</a></p>
-    <p class="w3-xlarge">Now with configured CI/CD!</p>
 </header>
 
 

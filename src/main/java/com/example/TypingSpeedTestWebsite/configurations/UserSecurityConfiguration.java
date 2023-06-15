@@ -30,7 +30,8 @@ public class UserSecurityConfiguration {
         http
                 .authorizeRequests()
                 .requestMatchers("/home").permitAll()
-                .requestMatchers("/paragraph").hasRole("USER")
+                .requestMatchers("/paragraph").authenticated()
+                .requestMatchers("/test").authenticated()
                 .requestMatchers("/paragraph/add").hasRole("ADMIN")
                 .and()
                 .formLogin().loginPage("/user-panel").permitAll()

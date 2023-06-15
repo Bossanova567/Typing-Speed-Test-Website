@@ -3,6 +3,7 @@ package com.example.TypingSpeedTestWebsite.controllers;
 import com.example.TypingSpeedTestWebsite.models.Account;
 import com.example.TypingSpeedTestWebsite.models.Role;
 import com.example.TypingSpeedTestWebsite.services.AccountService;
+import com.example.TypingSpeedTestWebsite.services.HistoryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class UserController {
 	
 	@Autowired
 	private AccountService accountService;
+
+	@Autowired
+	private HistoryService historyService;
 
 	@Operation(summary = "Register new account", description = "Heads to registration page.")
 	@RequestMapping(value = "register",method = RequestMethod.GET)
@@ -45,7 +49,8 @@ public class UserController {
 
 	@Operation(summary = "View dashboard", description = "Heads to personal dashboard page, where users statistics is seen.")
 	@RequestMapping(value = "dashboard",method = RequestMethod.GET)
-	public String dashboard(ModelMap modelMap) {
+	public String dashboard(ModelMap modelMap, Authentication authentication) {
+		modelMap.put("history", historyService.findAllWithOrder(accountService.findByUsername(authentication.getName()).getId()));
 		return "dashboard";
 	}
 
@@ -73,6 +78,5 @@ public class UserController {
 			return "profile";
 		}
 	}
-	
-	
+
 }

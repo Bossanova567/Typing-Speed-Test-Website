@@ -1,7 +1,7 @@
 # Typing-Speed-Test-Website
 Deployed on [Azure Web Apps](https://typingspeedtestwebsite.azurewebsites.net).
 
-Being developed by Yaroslav Tsvyk. ([Telegram](https://t.me/EdenMonde))
+Being developed by Yaroslav Tsvyk. ([Telegram](https://t.me/deathtoheaven))
 
 Email: mygoodcovers@gmail.com.
 
